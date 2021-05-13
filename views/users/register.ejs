@@ -1,0 +1,61 @@
+<%- include('../partials/header') %>
+
+    <div id="card-area">
+        <div class="card">
+            <div class="card-body">
+
+                <!-- error -->
+                <% if(error && error.length) { %>
+                    <div id="flash-error">
+                        <%= error %>
+                    </div>
+                    <% } %>
+
+                        <!-- title -->
+                        <h4 class="card-title">
+                            Create Account
+                        </h4>
+
+                        <!-- form -->
+                        <form action="/users/register" method="post">
+
+                            <!-- email -->
+                            <div class="accounts-content">
+                                <label for="email">email: </label>
+                                <input type="text" id="email" name="email" placeholder="email" name="email">
+                            </div>
+
+                            <br>
+
+                            <!-- password -->
+                            <div class="accounts-content">
+                                <label for="password">password: </label>
+                                <input type="text" id="password" name="password" placeholder="password" name="password">
+                            </div>
+
+                            <br>
+
+                            <!-- submit -->
+                            <button class="btn btn-primary accounts-content">
+                                Create Account
+                            </button>
+
+                        </form>
+
+                        <h3>Or</h3>
+
+                        <!-- or create account -->
+                        <div>
+                            <span class="alert">
+                                already have an account
+                            </span>
+                            <a href="login">
+                                <button type="button" class="btn btn-info">
+                                    Log In
+                                </button>
+                            </a>
+                        </div>
+
+            </div>
+        </div>
+    </div>

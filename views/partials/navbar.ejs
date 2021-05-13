@@ -1,0 +1,23 @@
+<nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">Movies DB</a>
+
+    <% if( user ) { %>
+
+        <!-- add a movie -->
+        <div class="add-content card card-body account-dropdown">
+            <a class="account-links" href="/movies/new">Add a Movie</a>
+        </div>
+
+
+
+        <ul class="nav justify-content-end">
+
+            <!-- sign out -->
+            <a class="account-links card card-body account-dropdown" href="/users/logout">
+                sign out
+            </a>
+
+        </ul>
+
+        <% } %>
+</nav>

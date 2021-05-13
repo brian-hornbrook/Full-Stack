@@ -1,0 +1,28 @@
+
+/* navbar */
+.justify-content-end{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+navbar i {
+    background-color: blue;
+}
+.account-links {
+    color: white;
+    padding: 0 5px;
+
+}
+.account-links:hover {
+    color: white;
+    
+}
+
+.account-dropdown {
+    padding: 0.3rem;
+}
+
+.add-content {
+    max-width: 50px;
+}

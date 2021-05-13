@@ -1,0 +1,17 @@
+#welcome {
+    text-align: center;
+}
+
+.movie-objects {
+    padding: 5px 5;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.movie-buttons {
+    font-size: .8rem;
+}
+
+.show-buttons {
+    display: inline-block;
+}

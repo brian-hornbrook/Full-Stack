@@ -1,0 +1,71 @@
+<%- include('../partials/header') %>
+
+    <!-- flash login message -->
+    <% if(success && success.length) { %>
+        <div id="success-area">
+            <div id="flash-success">
+                <%= success %>
+                    &nbsp;
+                    <span id="success-user">
+                        <%= user.username %>
+                    </span>
+            </div>
+        </div>
+
+        <script>
+            function remove() {
+                setTimeout(() => {
+                    document.getElementById('flash-success').style.display = "none"
+                }, 3000);
+
+            }
+        </script>
+        <% } %>
+
+            <!-- user name -->
+            <h3 id="welcome">
+                <%= user.username %>'s Movies
+            </h3>
+
+            <!-- movies -->
+            <% user.movies.forEach( movie=> { %>
+                <div id="card-area">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <!-- title -->
+                            <p>
+                                <span class="movie-objects">Title: </span>
+                                <%= movie.title %>
+                            </p>
+
+                            <!-- year -->
+                            <p>
+                                <span class="movie-objects">Year: </span>
+                                <%= movie.year %>
+                            </p>
+
+                            <!-- update button -->
+                            <div class="show-buttons">
+                                <a href="/movies/update/<%= movie.id %>">
+                                    <button type="button" class="btn btn-primary movie-buttons">
+                                        update
+                                    </button>
+                                </a>
+                            </div>
+
+                            <!-- delete button -->
+                            <div class="show-buttons">
+                                <form action="/movies/delete/<%= movie.id %>?_method=DELETE" method="post">
+                                    <button class="btn btn-danger movie-buttons">
+                                        Delete
+                                    </button>
+                                </form>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <% }) %>

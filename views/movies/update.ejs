@@ -1,0 +1,41 @@
+<%- include('../partials/header') %>
+
+    <div id="card-area">
+        <div class="card">
+            <div class="card-body">
+
+                <!-- description -->
+                <h4 class="card-title">
+                    Update the Movie Info
+                </h4>
+
+                <!-- form -->
+                <form action="/movies/update/<%= movie.id %>?_method=PUT" method="post">
+
+                    <!-- new movie title -->
+                    <div class="accounts-content">
+                        <label for="title">title: </label>
+                        <input type="text" id="title" placeholder="title" value="<%= movie.title %>"
+                            name="movie[title]">
+                    </div>
+
+                    <br>
+
+                    <!-- new movie year -->
+                    <div class="accounts-content">
+                        <label for="year">year: </label>
+                        <input type="text" id="year" placeholder="year" value="<%= movie.year %>" name="movie[year]">
+                    </div>
+
+                    <br>
+
+                    <!-- submit -->
+                    <button class="btn btn-primary accounts-content">
+                        Update Movie
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
